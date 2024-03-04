@@ -1,8 +1,15 @@
 def main():
-    n = int(input("Which Fibonacci number do you want? "))
+    while True:
+        n = input("Which Fibonacci number do you want? ")
+        if n.isdigit():
+            n = int(n)
+            break
+        else:
+            print("Please enter a positive integer.")
     print(f'The {ordinal(n)} Fibonacci number is {fibonacci(n)}.')
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
+    '''Returns the nth Fibonacci number.'''
     if n <= 0:
         return 0
     elif n <= 2:
@@ -10,8 +17,8 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 
-#This is just to clean up the text output
-def ordinal(n):
+def ordinal(n: int) -> str:
+    '''Returns the ordinal form of an integer.'''
     suffix = ["th", "st", "nd", "rd"]
 
     if n % 10 in [1, 2, 3] and n not in [11, 12, 13]:
