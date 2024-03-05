@@ -1,0 +1,33 @@
+"""
+File: circle.py
+Draws a circle.
+
+1. The inputs are the coourdinates of the center point and the radius.
+
+"""
+
+import math
+from turtle import Turtle
+
+def drawCircle(t, x, y, radius):
+    """Draws a circle with the given center point and radius."""
+    t.up()
+    t.goto(x + radius, y)
+    t.setheading(90)
+    t.down()
+    for count in range(120):
+        t.left(3)
+        t.forward(2.0 * math.pi * Parameter / 120.0)
+    
+
+def main():
+    """Allows the user to enter the center point and the radius."""
+    # Write a script that asks the user for the x coordinate.
+    # Write a script that asks the user for the y coordinate.
+    # Write a script that asks the user for the radius 
+    # Modify the drawCircle(Turtle(), Parameter1, Parameter2, Parameter3)
+
+if __name__ == "__main__":
+   main()
+
+
